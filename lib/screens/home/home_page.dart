@@ -25,38 +25,19 @@ class _HomePageState extends State<HomePage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Hello,',
-                      style: TextStyle(color: Colors.grey[500]),
-                    ),
+
                     Row(
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 8.0),
-                          child: Text(
-                            'Promlert Lovichit',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+
                         ),
-                        //SizedBox(width: 8.0),
-                        Image.asset(
-                          'assets/images/hand_wave.png',
-                          width: 40.0,
-                        ),
+
                       ],
                     )
                   ],
                 ),
-                SizedBox(
-                  width: 45.0,
-                  height: 45.0,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/profile.jpg'),
-                  ),
-                )
+
               ],
             ),
           ),
@@ -68,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0),
-                    child: Text('Courses', style: TextStyle(fontSize: 26.0)),
+                    child: Center(child: Text('Premium', style: TextStyle(fontSize: 26.0))),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
@@ -80,8 +61,8 @@ class _HomePageState extends State<HomePage> {
                         // ปุ่ม All Topics
                         Expanded(
                           child: CategoryButton(
-                            text: 'All Topics',
-                            icon: Icons.water_drop,
+                            text: 'Full Access Lessons',
+                            icon: Icons.map,
                             color: Colors.lightBlue,
                             isSelected: value1,
                           ),
@@ -90,10 +71,10 @@ class _HomePageState extends State<HomePage> {
                         // ปุ่ม Popular
                         Expanded(
                           child: CategoryButton(
-                            text: 'Popular',
-                            icon: Icons.bolt,
-                            color: Colors.pink,
-                            isSelected: true,
+                            text: 'Unlock All Limitations',
+                            icon: Icons.book,
+                            color: Colors.lightBlue,
+                            isSelected: value1,
                           ),
                         ),
                       ],
@@ -109,20 +90,20 @@ class _HomePageState extends State<HomePage> {
                         // ปุ่ม Newest
                         Expanded(
                           child: CategoryButton(
-                            text: 'Newest',
-                            icon: Icons.star,
-                            color: Colors.orange,
-                            isSelected: true,
+                            text: 'All Topics Available',
+                            icon: Icons.book_sharp,
+                            color: Colors.lightBlue,
+                            isSelected: value1,
                           ),
                         ),
                         SizedBox(width: 16.0),
                         // ปุ่ม Advanced
                         Expanded(
                           child: CategoryButton(
-                            text: 'Advanced',
+                            text: 'Personlized Coaching',
                             icon: Icons.bookmark,
-                            color: Colors.green,
-                            isSelected: true,
+                            color: Colors.lightBlue,
+                            isSelected: value1,
                           ),
                         ),
                       ],
@@ -137,22 +118,48 @@ class _HomePageState extends State<HomePage> {
                             value1 = !value1;
                           });
                         },
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Text('TEST'),
-                        ),
-                      ),
-                    ),
-                  ),
 
-                  CategoryButton(text: 'xxx', icon: Icons.abc , color: Colors.purple , isSelected: true)
+
+
+
+
+                        child: Padding(
+                          padding: const EdgeInsets.all(22.0),
+                          child: Text('Start 3 Days Free Trial'),
+                        ),
+
+                      ),
+
+
+                    ),
+
+
+
+
+
+
+                  )
+
+
+
+
+
+
                 ],
               ),
             ),
+
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0, bottom: 16.0, left: 16.0, right: 16.0),
+            child: Text(
+              '2023 Special Early Birds Offer',
+              style: TextStyle(fontSize: 18.0),
+            ),
           ),
         ],
+
       ),
     );
   }
 }
-
